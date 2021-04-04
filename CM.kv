@@ -1,0 +1,253 @@
+<GroupButton@Button>:
+	font_size: 30
+
+
+
+<PeopleButton@ToggleButton>:
+	font_size: 15
+<PeopleScreen@Screen>:
+	people: grid
+	BoxLayout:
+#		orientation: 'vertical'
+#		AnchorLayout:
+#			size_hint: 1, 0.2
+#			Label:
+#				text: "Выбери присутствующих бойцов"
+#				font_size: 20
+#
+		GridLayout:
+			id: grid
+			cols: 2
+
+<GroupScreen>:
+	BoxLayout:
+		orientation: 'vertical'
+		Label:
+			text: "Выбери свою армию"
+			font_size: 30
+		GroupButton:
+			text: 'Весь класс'
+			on_release:
+				root.groupAll(root)
+				root.manager.current = 'all'
+		GroupButton:
+			text: 'Группа 1 (Хлопенова)'
+			on_release:
+				root.group1(root)
+				root.manager.current = 'first'
+		GroupButton:
+			text: 'Группа 2 (Богачева)'
+			on_release:
+				root.group2(root)
+				root.manager.current = 'second'
+
+
+<GroupAllScreen@PeopleScreen>:
+    BoxLayout:
+		orientation: 'vertical'
+		AnchorLayout:
+			size_hint: 1, 0.2
+			Label:
+				text: "Выбери присутствующих бойцов"
+				font_size: 20
+
+
+		GridLayout:
+			id: grid
+			cols: 2
+
+			PeopleButton:
+                text: 'Алексей Зубков'
+
+            PeopleButton:
+                text: 'Али Закиров'
+
+            PeopleButton:
+                text: 'Альберт Гусейнов'
+
+            PeopleButton:
+                text: 'Андрей Артемов'
+
+            PeopleButton:
+                text: 'Андрей Демьянюк'
+
+            PeopleButton:
+                text: 'Андрей Стец'
+
+            PeopleButton:
+                text: 'Андрей Швецов'
+
+            PeopleButton:
+                text: 'Артем Фоломеев'
+
+            PeopleButton:
+                text: 'Василий Чирвинский'
+
+            PeopleButton:
+                text: 'Денис Густомясов'
+
+            PeopleButton:
+                text: 'Дмитрий Лемешев'
+
+            PeopleButton:
+                text: 'Дмитрий Щагин'
+
+            PeopleButton:
+                text: 'Евгения Елистратова'
+
+            PeopleButton:
+                text: 'Елена Никуленко'
+
+            PeopleButton:
+                text: 'Елизавета Тимофеева'
+
+            PeopleButton:
+                text: 'Захар Куликов'
+
+            PeopleButton:
+                text: 'Кристина Столярова'
+
+            PeopleButton:
+                text: 'Максим Бычков'
+
+            PeopleButton:
+                text: 'Мария Никитина'
+
+            PeopleButton:
+                text: 'Михаил Захаров'
+
+            PeopleButton:
+                text: 'Олег Леоненко'
+
+            PeopleButton:
+                text: 'Павел Брусиловский'
+
+            PeopleButton:
+                text: 'Сергей Осипов'
+
+            PeopleButton:
+                text: 'Федор Царев'
+
+            Button:
+                text: 'Кого нет?'
+                background_color: .2, .3, .7, 1
+                on_release:
+                    root.checkmissing()
+#                    root.manager.current = 'cm'
+
+
+
+
+<Group1Screen@PeopleScreen>:
+    BoxLayout:
+		orientation: 'vertical'
+		AnchorLayout:
+			size_hint: 1, 0.2
+			Label:
+				text: "Выбери присутствующих бойцов"
+				font_size: 20
+
+
+		GridLayout:
+			id: grid
+			cols: 2
+
+			PeopleButton:
+                text: 'Алексей Зубков'
+
+            PeopleButton:
+                text: 'Андрей Артемов'
+
+            PeopleButton:
+                text: 'Дмитрий Щагин'
+
+            PeopleButton:
+                text: 'Евгения Елистратова'
+
+            PeopleButton:
+                text: 'Елена Никуленко'
+
+            PeopleButton:
+                text: 'Елизавета Тимофеева'
+
+            PeopleButton:
+                text: 'Кристина Столярова'
+
+            PeopleButton:
+                text: 'Максим Бычков'
+
+            PeopleButton:
+                text: 'Мария Никитина'
+
+            PeopleButton:
+                text: 'Михаил Захаров'
+
+            PeopleButton:
+                text: 'Олег Леоненко'
+
+            PeopleButton:
+                text: 'Сергей Осипов'
+
+            PeopleButton:
+                text: 'Федор Царев'
+
+            Button:
+                text: 'Кого нет?'
+                background_color: .2, .3, .7, 1
+                on_release:
+                    root.checkmissing()
+
+<Group2Screen>:
+    lbl: lbl
+    BoxLayout:
+		orientation: 'vertical'
+		AnchorLayout:
+			size_hint: 1, 0.2
+			Label:
+			    id: lbl
+				text: "Выбери присутствующих бойцов"
+				font_size: 20
+
+
+		GridLayout:
+			id: grid
+			cols: 2
+
+            PeopleButton:
+                text: 'Али Закиров'
+
+            PeopleButton:
+                text: 'Альберт Гусейнов'
+
+            PeopleButton:
+                text: 'Андрей Демьянюк'
+
+            PeopleButton:
+                text: 'Андрей Стец'
+
+            PeopleButton:
+                text: 'Андрей Швецов'
+
+            PeopleButton:
+                text: 'Артем Фоломеев'
+
+            PeopleButton:
+                text: 'Василий Чирвинский'
+
+            PeopleButton:
+                text: 'Денис Густомясов'
+
+            PeopleButton:
+                text: 'Дмитрий Лемешев'
+
+            PeopleButton:
+                text: 'Захар Куликов'
+
+            PeopleButton:
+                text: 'Павел Брусиловский'
+
+            Button:
+                text: 'Кого нет?'
+                background_color: .2, .3, .7, 1
+                on_release:
+                    root.checkmissing()
