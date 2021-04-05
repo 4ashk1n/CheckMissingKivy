@@ -1,10 +1,10 @@
 <GroupButton@Button>:
-	font_size: 30
+	font_size: root.height / 7
 
 
 
-<PeopleButton@ToggleButton>:
-	font_size: 15
+#<PeopleButton@ToggleButton>:
+#	font_size: root.height / 3
 <PeopleScreen@Screen>:
 	people: grid
 	BoxLayout:
@@ -49,7 +49,7 @@
 			size_hint: 1, 0.2
 			Label:
 				text: "Выбери присутствующих бойцов"
-				font_size: 20
+				font_size: root.height / 35
 
 
 		GridLayout:
@@ -145,7 +145,7 @@
 			size_hint: 1, 0.2
 			Label:
 				text: "Выбери присутствующих бойцов"
-				font_size: 20
+				font_size: root.height / 35
 
 
 		GridLayout:
@@ -206,7 +206,7 @@
 			Label:
 			    id: lbl
 				text: "Выбери присутствующих бойцов"
-				font_size: 20
+				font_size: root.height / 35
 
 
 		GridLayout:
