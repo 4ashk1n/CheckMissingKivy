@@ -10,11 +10,13 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.textinput import TextInput
 from kivy.core.window import Window
+from kivy.uix.codeinput import CodeInput
 
 Config.set('graphics', 'resizable', '0')
 Config.set('graphics', 'width', '400')
 Config.set('graphics', 'height', '800')
-Window.size = (400,800)
+print(Config.get('graphics','height'))
+# Window.size = (400,800)
 
 Builder.load_file('CM.kv')
 
@@ -60,12 +62,13 @@ class PeopleScreen(Screen):
         # print(self.ids)
         # self.lbl.text = 'Отсутствующие бойцы'
         self.children[0].add_widget(
-            TextInput(
+            CodeInput(
                 text=misslist,
             )
         )
 
 class PeopleButton(ToggleButton):
+    font_size = int(Config.get('graphics','height')) / 50
     pass
 
 
@@ -123,4 +126,5 @@ class CMApp(App):
 
 
 if __name__ == "__main__":
+
     CMApp().run()
